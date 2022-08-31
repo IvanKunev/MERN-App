@@ -7,7 +7,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import moment from 'moment'
 import useStyles from './styles'
 
-function Post({ post }) {
+function Post({ post, setCurretId }) {
     const classes = useStyles()
   return (
     <Card className={classes.card}>
@@ -17,7 +17,7 @@ function Post({ post }) {
             <Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
         </div>
         <div className={classes.overlay2}>
-            <Button style={{ color: 'white' }} size='small' onClick={() => {}}>
+            <Button style={{ color: 'white' }} size='small' onClick={() => setCurretId(post._id)}>
               <MoreHorizIcon fontSize='default' />
             </Button>
         </div>
